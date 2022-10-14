@@ -37,13 +37,10 @@ customers=[]
 count = 0
 list(a_href)
 for item in a_href:
-    # print(str(item).split(">")[1].split("<")[0])
     customers.append(str(item).split(">")[1].split("<")[0])
     count +=1
 customers.remove('Grafana Cloud Portal')
 customers.remove('You are currently subscribed to ')
-# for i in customers:
-#     print(i)
 count = count - 2 #calulates the number of tenants in grafana
 print(f"{bcolors.OKGREEN}Runai organization has {count} tenants in use!{bcolors.ENDC}")
 grafana_tenants_limit=150 #fixed quota in GrafanaLab
